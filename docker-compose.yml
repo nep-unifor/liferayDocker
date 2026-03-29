@@ -1,0 +1,12 @@
+services:
+  liferay:
+    image: liferay/portal:7.4.3.112-ga112
+    ports:
+      - "8080:8080"
+    environment:
+      - LIFERAY_SETUP_PERIOD_WIZARD_PERIOD_ENABLED=false
+      - LIFERAY_DEFAULT_PERIOD_ADMIN_PERIOD_PASSWORD=test
+      # As 3 linhas abaixo desativam o cache do Liferay (Modo Dev)
+      - LIFERAY_JAVASCRIPT_PERIOD_FAST_PERIOD_LOAD=false
+      - LIFERAY_THEME_PERIOD_CSS_PERIOD_FAST_PERIOD_LOAD=false
+      - LIFERAY_MINIFIER_PERIOD_ENABLED=false

@@ -1,0 +1,10 @@
+# Ignorar dados pesados e temporários
+liferay_data/
+osgi/state/
+logs/
+work/
+temp/
+
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
